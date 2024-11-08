@@ -1,0 +1,163 @@
+[gd_scene load_steps=27 format=3 uid="uid://biwafs2dhq8ax"]
+
+[ext_resource type="FontFile" uid="uid://cqqmxypu0l2ip" path="res://Assets/fonts/webfonts/Banquise-Regular.woff" id="1_b1bby"]
+[ext_resource type="Texture2D" uid="uid://dcctsaek2ji1u" path="res://Assets/GUI/WhiteBackground.jpeg" id="2_eo7vg"]
+[ext_resource type="Script" path="res://Assets/Scripts/menu_2.gd" id="2_qcvpp"]
+[ext_resource type="Texture2D" uid="uid://d0iuh03sxmgct" path="res://Assets/Animaciones_menu/pixil-frame-0.png" id="3_qak1q"]
+[ext_resource type="Texture2D" uid="uid://ldaqr80yjg7e" path="res://Assets/Animaciones_menu/pixil-frame-1.png" id="4_ox2gs"]
+[ext_resource type="Texture2D" uid="uid://dwjrf03b5jwxg" path="res://Assets/Animaciones_menu/pixil-frame-2.png" id="5_4nyxf"]
+[ext_resource type="Texture2D" uid="uid://bpflm8ri7uvwr" path="res://Assets/Animaciones_menu/pixil-frame-3.png" id="6_y32xi"]
+[ext_resource type="Texture2D" uid="uid://5qdreeps0mwe" path="res://Assets/Animaciones_menu/pixil-frame-4.png" id="7_6wmiv"]
+[ext_resource type="Texture2D" uid="uid://dl05a6bt3m4wg" path="res://Assets/Animaciones_menu/pixil-frame-5.png" id="8_idxru"]
+[ext_resource type="Texture2D" uid="uid://bmgtyvfgwax02" path="res://Assets/Animaciones_menu/pixil-frame-6.png" id="9_ppx3p"]
+[ext_resource type="Texture2D" uid="uid://dxdketoddee0y" path="res://Assets/Animaciones_menu/pixil-frame-7.png" id="10_m3rxi"]
+[ext_resource type="Texture2D" uid="uid://b67bxet1u68so" path="res://Assets/Animaciones_menu/pixil-frame-8.png" id="11_l2y6q"]
+[ext_resource type="Texture2D" uid="uid://dcjuaq502d7lo" path="res://Assets/Animaciones_menu/pixil-frame-9.png" id="12_5gcui"]
+[ext_resource type="Texture2D" uid="uid://bsgkd3ltmssuu" path="res://Assets/Animaciones_menu/pixil-frame-10.png" id="13_wwdva"]
+[ext_resource type="Texture2D" uid="uid://x353jd3ii5ua" path="res://Assets/Animaciones_menu/pixil-frame-11.png" id="14_hrfkc"]
+[ext_resource type="Texture2D" uid="uid://cmb0edbpu68hd" path="res://Assets/Animaciones_menu/pixil-frame-12.png" id="15_pb6cl"]
+[ext_resource type="Texture2D" uid="uid://gqqdaqfqanhv" path="res://Assets/Animaciones_menu/pixil-frame-13.png" id="16_fyu2f"]
+[ext_resource type="Texture2D" uid="uid://b5cm5rutd8c5u" path="res://Assets/Animaciones_menu/pixil-frame-14.png" id="17_gw8ws"]
+[ext_resource type="Texture2D" uid="uid://d01nfcn3hdgaf" path="res://Assets/Animaciones_menu/pixil-frame-15.png" id="18_kpdqb"]
+[ext_resource type="Texture2D" uid="uid://g1ol38en5rah" path="res://Assets/Animaciones_menu/pixil-frame-16.png" id="19_64t4m"]
+[ext_resource type="Texture2D" uid="uid://di2gbofm3tg0a" path="res://Assets/Animaciones_menu/pixil-frame-17.png" id="20_6kmdk"]
+[ext_resource type="Script" path="res://Assets/Scripts/MenuSprite.gd" id="21_pdj1b"]
+[ext_resource type="Script" path="res://Assets/Scripts/contenedor_botones.gd" id="23_cfnh5"]
+[ext_resource type="Script" path="res://Assets/Scripts/creditos.gd" id="24_8rcjn"]
+
+[sub_resource type="Theme" id="Theme_mmnow"]
+default_font = ExtResource("1_b1bby")
+default_font_size = 40
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmwe8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qak1q")
+}],
+"loop": false,
+"name": &"Deploy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qak1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ox2gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4nyxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y32xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6wmiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_idxru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ppx3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m3rxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l2y6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5gcui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wwdva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hrfkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pb6cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fyu2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gw8ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kpdqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_64t4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6kmdk")
+}],
+"loop": false,
+"name": &"Running",
+"speed": 6.0
+}]
+
+[node name="menu2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mmnow")
+script = ExtResource("2_qcvpp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eo7vg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 0)
+scale = Vector2(4.09155, 3.36972)
+sprite_frames = SubResource("SpriteFrames_wmwe8")
+animation = &"Running"
+script = ExtResource("21_pdj1b")
+
+[node name="contenedorBotones" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 724.0
+offset_right = 775.0
+offset_bottom = 960.0
+alignment = 1
+script = ExtResource("23_cfnh5")
+
+[node name="botonContinuar" type="Button" parent="contenedorBotones"]
+layout_mode = 2
+text = "CONTINUAR
+"
+flat = true
+
+[node name="botonIniciar" type="Button" parent="contenedorBotones"]
+layout_mode = 2
+text = "INICIAR JUEGO
+"
+flat = true
+
+[node name="botonCreditos" type="Button" parent="contenedorBotones"]
+layout_mode = 2
+text = "CREDITOS"
+flat = true
+script = ExtResource("24_8rcjn")
+
+[node name="botonSalir" type="Button" parent="contenedorBotones"]
+layout_mode = 2
+text = "SALIR
+"
+flat = true
+
+[connection signal="pressed" from="contenedorBotones/botonIniciar" to="." method="iniciar_juego"]
+[connection signal="pressed" from="contenedorBotones/botonCreditos" to="contenedorBotones/botonCreditos" method="boton_creditoschidos"]
+[connection signal="pressed" from="contenedorBotones/botonSalir" to="." method="cerrar_juego"]
