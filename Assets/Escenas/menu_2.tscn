@@ -119,7 +119,7 @@ grow_vertical = 2
 texture = ExtResource("2_eo7vg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(640, 0)
+position = Vector2(722, 22)
 scale = Vector2(4.09155, 3.36972)
 sprite_frames = SubResource("SpriteFrames_wmwe8")
 animation = &"Running"
