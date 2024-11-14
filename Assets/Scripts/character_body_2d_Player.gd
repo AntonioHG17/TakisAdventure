@@ -174,6 +174,7 @@ func _process(delta):
 		movimiento()
 		actualizar_salto()
 		muerte()
+		
 
 func _physics_process(delta):
 	gravedad(delta)

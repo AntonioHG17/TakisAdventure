@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=4 uid="uid://bq7iilxeix76o"]
+[gd_scene load_steps=29 format=4 uid="uid://bq7iilxeix76o"]
 
 [ext_resource type="Texture2D" uid="uid://bar7keriwjxyt" path="res://Assets/terreno/Terrain (16x16).png" id="1_1j5g7"]
+[ext_resource type="Script" path="res://Assets/Scripts/mapa_1.gd" id="1_565oh"]
 [ext_resource type="PackedScene" uid="uid://cj8tl7a4seukf" path="res://Assets/Escenas/player.tscn" id="1_te02f"]
 [ext_resource type="Texture2D" uid="uid://b7nakx0ngxvls" path="res://Assets/terreno/desert_b.png" id="2_trcpn"]
 [ext_resource type="Texture2D" uid="uid://5lwch6mcqbuw" path="res://Assets/enemigos o cosas que no lo son xd/spikes.png" id="3_m38ks"]
@@ -802,7 +803,8 @@ physics_layer_2/collision_mask = 4
 sources/1 = SubResource("TileSetAtlasSource_b3tm7")
 sources/2 = SubResource("TileSetAtlasSource_32dg6")
 
-[node name="Node" type="Node"]
+[node name="mapa1" type="Node"]
+script = ExtResource("1_565oh")
 
 [node name="Player" parent="." instance=ExtResource("1_te02f")]
 position = Vector2(37, -245)
