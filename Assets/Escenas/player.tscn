@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cj8tl7a4seukf"]
+[gd_scene load_steps=25 format=3 uid="uid://cj8tl7a4seukf"]
 
 [ext_resource type="Texture2D" uid="uid://dlugiwrbb0cr0" path="res://Assets/Characters/sprite_sheet_C.png" id="1_5xg82"]
 [ext_resource type="Script" path="res://Assets/Scripts/character_body_2d_Player.gd" id="1_kuvym"]
@@ -74,6 +74,14 @@ region = Rect2(32, 2, 32, 31)
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqvi"]
 atlas = ExtResource("1_5xg82")
 region = Rect2(0, 2, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg8pj"]
+atlas = ExtResource("1_5xg82")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3eh8"]
+atlas = ExtResource("1_5xg82")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1gwy"]
 animations = [{
@@ -185,6 +193,17 @@ animations = [{
 "loop": false,
 "name": &"Saludo",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg8pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3eh8")
+}],
+"loop": false,
+"name": &"SaludoFinal",
+"speed": 1.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r45kv"]
@@ -199,7 +218,7 @@ visibility_layer = 7
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_kuvym")
-speed = 128.0
+speed = 140.0
 jump_speed = 400.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Taki"]
@@ -207,14 +226,14 @@ texture_filter = 1
 position = Vector2(145, 182.25)
 scale = Vector2(1, 0.983871)
 sprite_frames = SubResource("SpriteFrames_h1gwy")
-animation = &"Muerte"
+animation = &"Saludo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Taki"]
 position = Vector2(146, 180.875)
 shape = SubResource("CapsuleShape2D_r45kv")
 
 [node name="Camera2D" type="Camera2D" parent="Taki"]
-position = Vector2(215, 178)
+position = Vector2(145, 181)
 zoom = Vector2(3, 3)
 
 [node name="Ray_Cast_Walls" type="RayCast2D" parent="Taki"]

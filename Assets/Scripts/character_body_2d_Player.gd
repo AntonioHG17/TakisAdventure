@@ -18,7 +18,7 @@ var is_dashing: bool = false
 var dash_timer: float = 0.0
 var dash_cooldown_timer: float = 0.0
 var estadoMuerte = false
-
+var nivel: int = 1
 func _ready():
 	$Ray_Cast_Walls.target_position.x = rayCastDimension
 	if not saludo_reproducido:
@@ -138,32 +138,53 @@ func actualizar_salto():
 func muerte():
 	if $Ray_Cast_Hazard_Up.get_collider():
 		if $Ray_Cast_Hazard_Up.get_collider().is_in_group("Hazards"):
+			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
 			velocity.y = 0
 			velocity.x = 0
 			animated_sprite_2d.play("Muerte")
 			await get_tree().create_timer(3.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/mapa1.tscn")
+			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Hazard_Down.get_collider():
 		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Hazards"):
+			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
 			velocity.y = 0
 			velocity.x = 0
 			animated_sprite_2d.play("Muerte")
 			await get_tree().create_timer(3.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/mapa1.tscn")
+			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Walls.get_collider():
 		if $Ray_Cast_Walls.get_collider().is_in_group("Hazards"):
+			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
 			velocity.y = 0
 			velocity.x = 0
 			animated_sprite_2d.play("Muerte")
 			await get_tree().create_timer(3.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/mapa1.tscn")
-			
+			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
+
+func victoria():
+	if $Ray_Cast_Walls.get_collider():
+		if $Ray_Cast_Walls.get_collider().is_in_group("Meta"):
+			# Bloquear movimiento del personaje
+			bloquea_movimiento = true
+			velocity = Vector2.ZERO
+
+			# Obtener la cámara para ajustar zoom
+			var camera = get_node("Camera2D")
+			if camera:
+				var tween = get_tree().create_tween()
+				tween.tween_property(camera, "zoom", Vector2(13, 13), 1.0)  # Zoom a 13 en 1 segundo
+
+			# Reproducir animación de SaludoFinal
+			animated_sprite_2d.play("SaludoFinal")
+			await get_tree().create_timer(3.0).timeout
+			GLOBAL.nivel += 1
+			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 
 func _process(delta):
 	if not bloquea_movimiento:
@@ -174,8 +195,9 @@ func _process(delta):
 		movimiento()
 		actualizar_salto()
 		muerte()
-		
+		victoria()
 
 func _physics_process(delta):
 	gravedad(delta)
 	move_and_slide()
+	

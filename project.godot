@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+GLOBAL="*res://Assets/Scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=1280
@@ -23,6 +27,12 @@ window/size/viewport_height=720
 window/size/mode=2
 window/size/extend_to_title=true
 window/stretch/mode="viewport"
+
+[global_group]
+
+Meta=""
+Hazards=""
+wall_jump=""
 
 [input]
 

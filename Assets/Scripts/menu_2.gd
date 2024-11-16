@@ -1,18 +1,21 @@
 extends Control
+@onready var boton_iniciar: Button = $contenedorBotones/botonIniciar
+@onready var boton_continuar: Button = $contenedorBotones/botonContinuar
+@onready var boton_creditos: Button = $contenedorBotones/botonCreditos
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	boton_iniciar.grab_focus()
 
 func iniciar_juego():
-	get_tree().change_scene_to_file("res://Assets/Escenas/mapa1.tscn")
+	get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	
 
 func cerrar_juego():
 	get_tree().quit()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
