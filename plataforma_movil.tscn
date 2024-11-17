@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://df1xwisdqmp76"]
+
+[ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="1_skejj"]
+[ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="2_4oscc"]
+
+[sub_resource type="Curve2D" id="Curve2D_jxwv0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -7, 0, 0, 0, 0, 0, -70, 0, 0, 0, 0, 104, -70)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lp0x"]
+size = Vector2(46, 7)
+
+[sub_resource type="Animation" id="Animation_pk3a7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a017x"]
+_data = {
+"Movimiento": ExtResource("2_4oscc"),
+"RESET": SubResource("Animation_pk3a7")
+}
+
+[node name="PlataformaMovil" type="Path2D"]
+position = Vector2(47, -40)
+curve = SubResource("Curve2D_jxwv0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(0, -7)
+rotates = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="PathFollow2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D/CharacterBody2D"]
+texture = ExtResource("1_skejj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_6lp0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a017x")
+}
+autoplay = "Movimiento"
