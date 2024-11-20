@@ -1,34 +1,91 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnkovudei781w"]
+[gd_scene load_steps=20 format=3 uid="uid://bnkovudei781w"]
 
 [ext_resource type="FontFile" uid="uid://cqqmxypu0l2ip" path="res://Assets/fonts/webfonts/Banquise-Regular.woff" id="1_jwxud"]
 [ext_resource type="Script" path="res://Assets/Scripts/cambio_nivel.gd" id="2_rv5tj"]
 [ext_resource type="Texture2D" uid="uid://c6s4kivwtlohu" path="res://Assets/GUI/Black_Background.jpg" id="3_grgix"]
-[ext_resource type="Texture2D" uid="uid://dlugiwrbb0cr0" path="res://Assets/Characters/sprite_sheet_C.png" id="4_n8r7x"]
+[ext_resource type="Texture2D" uid="uid://deondprnj361v" path="res://Assets/Characters/taki_sheet.png" id="4_fy360"]
 
 [sub_resource type="Theme" id="Theme_s8sk4"]
 default_font = ExtResource("1_jwxud")
 default_font_size = 40
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kucq5"]
-atlas = ExtResource("4_n8r7x")
-region = Rect2(128, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7bej"]
+atlas = ExtResource("4_fy360")
+region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_45qt8"]
-atlas = ExtResource("4_n8r7x")
-region = Rect2(160, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nun7m"]
+atlas = ExtResource("4_fy360")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u567t"]
+atlas = ExtResource("4_fy360")
+region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yshte"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kucq5")
+"texture": SubResource("AtlasTexture_n7bej")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_45qt8")
+"texture": SubResource("AtlasTexture_nun7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u567t")
 }],
 "loop": true,
-"name": &"Correr",
-"speed": 7.0
+"name": &"Pensativo",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3uif"]
+atlas = ExtResource("4_fy360")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8haw"]
+atlas = ExtResource("4_fy360")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv7q6"]
+atlas = ExtResource("4_fy360")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6qxk"]
+atlas = ExtResource("4_fy360")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrvtx"]
+atlas = ExtResource("4_fy360")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqrn3"]
+atlas = ExtResource("4_fy360")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5py8h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3uif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8haw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv7q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6qxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrvtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqrn3")
+}],
+"loop": true,
+"name": &"Cloud",
+"speed": 4.0
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xrdt5"]
@@ -64,12 +121,21 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_grgix")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+[node name="Taki_transicion" type="AnimatedSprite2D" parent="TextureRect"]
 position = Vector2(640, 307)
 scale = Vector2(3.875, 3.8125)
 sprite_frames = SubResource("SpriteFrames_yshte")
-animation = &"Correr"
-frame_progress = 0.376628
+animation = &"Pensativo"
+autoplay = "Pensativo"
+frame_progress = 0.859911
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(669, 198)
+scale = Vector2(4, 3.3125)
+sprite_frames = SubResource("SpriteFrames_5py8h")
+animation = &"Cloud"
+autoplay = "Cloud"
+frame_progress = 0.123602
 
 [node name="Nivel" type="Label" parent="TextureRect"]
 layout_mode = 1
@@ -78,10 +144,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.0
-offset_top = 48.0
-offset_right = 66.0
-offset_bottom = 144.0
+offset_left = -113.0
+offset_top = 51.0
+offset_right = 7.0
+offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -92,10 +158,11 @@ label_settings = SubResource("LabelSettings_xrdt5")
 
 [node name="ConteoNivel" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 630.0
-offset_top = 459.0
-offset_right = 670.0
-offset_bottom = 507.0
+offset_left = 695.0
+offset_top = 415.0
+offset_right = 735.0
+offset_bottom = 463.0
+text = "1"
 
 [node name="Muerte" type="Label" parent="TextureRect"]
 layout_mode = 1
@@ -104,10 +171,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -94.0
-offset_top = -196.0
-offset_right = 102.0
-offset_bottom = -100.0
+offset_left = -622.0
+offset_top = -697.0
+offset_right = -426.0
+offset_bottom = -601.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
@@ -118,10 +185,21 @@ label_settings = SubResource("LabelSettings_ln57h")
 
 [node name="ConteoMuerte" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 624.0
-offset_top = 583.0
-offset_right = 664.0
-offset_bottom = 631.0
+offset_left = 229.0
+offset_top = 26.0
+offset_right = 269.0
+offset_bottom = 74.0
+text = "0
+"
 label_settings = SubResource("LabelSettings_enbqn")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="dialogoRandom" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 529.0
+offset_right = 1048.0
+offset_bottom = 647.0
+text = "Hola"
+horizontal_alignment = 1

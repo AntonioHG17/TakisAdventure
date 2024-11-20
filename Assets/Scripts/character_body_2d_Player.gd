@@ -19,6 +19,9 @@ var dash_timer: float = 0.0
 var dash_cooldown_timer: float = 0.0
 var estadoMuerte = false
 var nivel: int = 1
+@onready var walk_sound: AudioStreamPlayer = $walkSound
+@onready var run_sound: AudioStreamPlayer = $runSound
+@onready var death_sound: AudioStreamPlayer = $deathSound
 func _ready():
 	$Ray_Cast_Walls.target_position.x = rayCastDimension
 	if not saludo_reproducido:
@@ -42,10 +45,12 @@ func movimiento():
 		if Input.is_action_pressed("Run"):
 			velocity.x = (speed * horizontal) * 2
 			if not ignore_horizontal_animation:
+				run_sound.play()
 				animated_sprite_2d.play("Correr")
 		else:
 			velocity.x = speed * horizontal
 			if not ignore_horizontal_animation:
+				walk_sound.play()
 				animated_sprite_2d.play("Caminar")
 		animated_sprite_2d.flip_h = horizontal < 0
 		if horizontal < 0:
@@ -138,6 +143,7 @@ func actualizar_salto():
 func muerte():
 	if $Ray_Cast_Hazard_Up.get_collider():
 		if $Ray_Cast_Hazard_Up.get_collider().is_in_group("Hazards"):
+			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
@@ -148,23 +154,25 @@ func muerte():
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Hazard_Down.get_collider():
 		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Hazards"):
+			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
 			velocity.y = 0
 			velocity.x = 0
 			animated_sprite_2d.play("Muerte")
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(4.0).timeout
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Walls.get_collider():
 		if $Ray_Cast_Walls.get_collider().is_in_group("Hazards"):
+			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
 			bloquea_movimiento = true
 			velocity.y = 0
 			velocity.x = 0
 			animated_sprite_2d.play("Muerte")
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(4.0).timeout
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 
 func victoria():
@@ -182,7 +190,7 @@ func victoria():
 
 			# Reproducir animación de SaludoFinal
 			animated_sprite_2d.play("SaludoFinal")
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(4.0).timeout
 			GLOBAL.nivel += 1
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 

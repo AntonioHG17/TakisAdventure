@@ -1,27 +1,31 @@
-[gd_scene load_steps=25 format=3 uid="uid://cj8tl7a4seukf"]
+[gd_scene load_steps=29 format=3 uid="uid://cj8tl7a4seukf"]
 
 [ext_resource type="Texture2D" uid="uid://dlugiwrbb0cr0" path="res://Assets/Characters/sprite_sheet_C.png" id="1_5xg82"]
 [ext_resource type="Script" path="res://Assets/Scripts/character_body_2d_Player.gd" id="1_kuvym"]
+[ext_resource type="Texture2D" uid="uid://deondprnj361v" path="res://Assets/Characters/taki_sheet.png" id="2_8c1mv"]
+[ext_resource type="AudioStream" uid="uid://dvrjbpaoqlec0" path="res://Assets/Efectos de Sonido para Taki's Adventure/Correr.ogg" id="4_nnq3h"]
+[ext_resource type="AudioStream" uid="uid://cusx7esomj5aj" path="res://Assets/Efectos de Sonido para Taki's Adventure/Muerte.ogg" id="4_p6xpn"]
+[ext_resource type="AudioStream" uid="uid://byaiq22y83qsj" path="res://Assets/Efectos de Sonido para Taki's Adventure/caminar.ogg" id="5_kb6ur"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iehqg"]
-atlas = ExtResource("1_5xg82")
-region = Rect2(32, 33, 32, 31)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki6su"]
+atlas = ExtResource("2_8c1mv")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5a8hc"]
 atlas = ExtResource("1_5xg82")
 region = Rect2(96, 2, 32, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhtfa"]
-atlas = ExtResource("1_5xg82")
-region = Rect2(0, 2, 32, 31)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eouw0"]
+atlas = ExtResource("2_8c1mv")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ieoq1"]
 atlas = ExtResource("1_5xg82")
 region = Rect2(128, 2, 32, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uor2l"]
-atlas = ExtResource("1_5xg82")
-region = Rect2(160, 2, 32, 31)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sctmk"]
+atlas = ExtResource("2_8c1mv")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjklv"]
 atlas = ExtResource("1_5xg82")
@@ -55,9 +59,9 @@ region = Rect2(0, 2, 32, 31)
 atlas = ExtResource("1_5xg82")
 region = Rect2(32, 2, 32, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_turry"]
-atlas = ExtResource("1_5xg82")
-region = Rect2(0, 33, 32, 31)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2ydv"]
+atlas = ExtResource("2_8c1mv")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oqel3"]
 atlas = ExtResource("1_5xg82")
@@ -87,7 +91,7 @@ region = Rect2(64, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iehqg")
+"texture": SubResource("AtlasTexture_ki6su")
 }],
 "loop": true,
 "name": &"Caida",
@@ -98,7 +102,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5a8hc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yhtfa")
+"texture": SubResource("AtlasTexture_eouw0")
 }],
 "loop": true,
 "name": &"Caminar",
@@ -109,7 +113,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ieoq1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uor2l")
+"texture": SubResource("AtlasTexture_sctmk")
 }],
 "loop": true,
 "name": &"Correr",
@@ -171,7 +175,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_turry")
+"texture": SubResource("AtlasTexture_y2ydv")
 }],
 "loop": false,
 "name": &"Salto",
@@ -226,7 +230,7 @@ texture_filter = 1
 position = Vector2(145, 182.25)
 scale = Vector2(1, 0.983871)
 sprite_frames = SubResource("SpriteFrames_h1gwy")
-animation = &"Saludo"
+animation = &"Salto"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Taki"]
 position = Vector2(146, 180.875)
@@ -250,3 +254,16 @@ collision_mask = 15
 position = Vector2(146, 184)
 target_position = Vector2(0, -22)
 collision_mask = 15
+
+[node name="jumpSound" type="AudioStreamPlayer" parent="Taki"]
+
+[node name="dashSound" type="AudioStreamPlayer" parent="Taki"]
+
+[node name="runSound" type="AudioStreamPlayer" parent="Taki"]
+stream = ExtResource("4_nnq3h")
+
+[node name="walkSound" type="AudioStreamPlayer" parent="Taki"]
+stream = ExtResource("5_kb6ur")
+
+[node name="deathSound" type="AudioStreamPlayer" parent="Taki"]
+stream = ExtResource("4_p6xpn")
