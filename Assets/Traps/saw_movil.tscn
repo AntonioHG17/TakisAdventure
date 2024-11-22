@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://tul5aylhqb8p"]
+[gd_scene load_steps=10 format=3 uid="uid://tul5aylhqb8p"]
 
-[ext_resource type="Texture2D" uid="uid://bokvyens50cf" path="res://Assets/Traps/Saw/On (38x38).png" id="1_nmxjr"]
+[ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="1_td1p2"]
 
 [sub_resource type="Curve2D" id="Curve2D_rhblc"]
 _data = {
@@ -8,72 +8,30 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2iwm"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(0, 0, 38, 38)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qxg3"]
+atlas = ExtResource("1_td1p2")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g3xup"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(38, 0, 38, 38)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2s76"]
+atlas = ExtResource("1_td1p2")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3xp32"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(76, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kyv26"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(114, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fpsoy"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(152, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2ce5"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(190, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_srs2p"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(228, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgkhc"]
-atlas = ExtResource("1_nmxjr")
-region = Rect2(266, 0, 38, 38)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bfsv3"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_dojuj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2iwm")
+"texture": SubResource("AtlasTexture_7qxg3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g3xup")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3xp32")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kyv26")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fpsoy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w2ce5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_srs2p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wgkhc")
+"texture": SubResource("AtlasTexture_d2s76")
 }],
 "loop": true,
 "name": &"default",
-"speed": 30.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b6d51"]
-radius = 18.0278
+radius = 9.0
 
 [sub_resource type="Animation" id="Animation_eecnv"]
 length = 0.001
@@ -123,9 +81,9 @@ position = Vector2(22, -1)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PathFollow2D" groups=["Hazards"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/CharacterBody2D"]
-sprite_frames = SubResource("SpriteFrames_bfsv3")
+sprite_frames = SubResource("SpriteFrames_dojuj")
 autoplay = "default"
-frame_progress = 0.591613
+frame_progress = 0.300593
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/CharacterBody2D" groups=["Hazards"]]
 shape = SubResource("CircleShape2D_b6d51")
