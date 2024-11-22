@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://biwafs2dhq8ax"]
+[gd_scene load_steps=28 format=3 uid="uid://biwafs2dhq8ax"]
 
 [ext_resource type="FontFile" uid="uid://cqqmxypu0l2ip" path="res://Assets/fonts/webfonts/Banquise-Regular.woff" id="1_b1bby"]
 [ext_resource type="Texture2D" uid="uid://dcctsaek2ji1u" path="res://Assets/GUI/WhiteBackground.jpeg" id="2_eo7vg"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/MenuSprite.gd" id="21_pdj1b"]
 [ext_resource type="Script" path="res://Assets/Scripts/contenedor_botones.gd" id="23_cfnh5"]
 [ext_resource type="Script" path="res://Assets/Scripts/creditos.gd" id="24_8rcjn"]
+[ext_resource type="AudioStream" uid="uid://diwfudhwjwypb" path="res://Assets/Efectos de Sonido para Taki's Adventure/selectOption.ogg" id="25_wt7pb"]
 
 [sub_resource type="Theme" id="Theme_mmnow"]
 default_font = ExtResource("1_b1bby")
@@ -157,6 +158,9 @@ layout_mode = 2
 text = "SALIR
 "
 flat = true
+
+[node name="select" type="AudioStreamPlayer" parent="contenedorBotones"]
+stream = ExtResource("25_wt7pb")
 
 [connection signal="pressed" from="contenedorBotones/botonIniciar" to="." method="iniciar_juego"]
 [connection signal="pressed" from="contenedorBotones/botonCreditos" to="contenedorBotones/botonCreditos" method="boton_creditoschidos"]
