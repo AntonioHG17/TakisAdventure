@@ -233,6 +233,7 @@ func muerte():
 func victoria():
 	if $Ray_Cast_Walls.get_collider():
 		if $Ray_Cast_Walls.get_collider().is_in_group("Meta"):
+			run_sound.stop()
 			# Bloquear movimiento del personaje
 			bloquea_movimiento = true
 			velocity = Vector2.ZERO
