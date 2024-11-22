@@ -1,11 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://cj8tl7a4seukf"]
+[gd_scene load_steps=30 format=3 uid="uid://cj8tl7a4seukf"]
 
 [ext_resource type="Texture2D" uid="uid://dlugiwrbb0cr0" path="res://Assets/Characters/sprite_sheet_C.png" id="1_5xg82"]
 [ext_resource type="Script" path="res://Assets/Scripts/character_body_2d_Player.gd" id="1_kuvym"]
 [ext_resource type="Texture2D" uid="uid://deondprnj361v" path="res://Assets/Characters/taki_sheet.png" id="2_8c1mv"]
 [ext_resource type="AudioStream" uid="uid://dvrjbpaoqlec0" path="res://Assets/Efectos de Sonido para Taki's Adventure/Correr.ogg" id="4_nnq3h"]
 [ext_resource type="AudioStream" uid="uid://cusx7esomj5aj" path="res://Assets/Efectos de Sonido para Taki's Adventure/Muerte.ogg" id="4_p6xpn"]
-[ext_resource type="AudioStream" uid="uid://byaiq22y83qsj" path="res://Assets/Efectos de Sonido para Taki's Adventure/caminar.ogg" id="5_kb6ur"]
+[ext_resource type="AudioStream" uid="uid://byaiq22y83qsj" path="res://Assets/Efectos de Sonido para Taki's Adventure/Salto.ogg" id="4_sia1d"]
+[ext_resource type="AudioStream" uid="uid://bjttqlunnp6o5" path="res://Assets/Efectos de Sonido para Taki's Adventure/Dash.ogg" id="5_vverg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ki6su"]
 atlas = ExtResource("2_8c1mv")
@@ -144,7 +145,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Escalar",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -230,7 +231,8 @@ texture_filter = 1
 position = Vector2(145, 182.25)
 scale = Vector2(1, 0.983871)
 sprite_frames = SubResource("SpriteFrames_h1gwy")
-animation = &"Salto"
+animation = &"Escalar"
+frame_progress = 0.6161
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Taki"]
 position = Vector2(146, 180.875)
@@ -256,14 +258,13 @@ target_position = Vector2(0, -22)
 collision_mask = 15
 
 [node name="jumpSound" type="AudioStreamPlayer" parent="Taki"]
+stream = ExtResource("4_sia1d")
 
 [node name="dashSound" type="AudioStreamPlayer" parent="Taki"]
+stream = ExtResource("5_vverg")
 
 [node name="runSound" type="AudioStreamPlayer" parent="Taki"]
 stream = ExtResource("4_nnq3h")
-
-[node name="walkSound" type="AudioStreamPlayer" parent="Taki"]
-stream = ExtResource("5_kb6ur")
 
 [node name="deathSound" type="AudioStreamPlayer" parent="Taki"]
 stream = ExtResource("4_p6xpn")
