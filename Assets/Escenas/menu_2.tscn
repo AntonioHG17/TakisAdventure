@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://biwafs2dhq8ax"]
+[gd_scene load_steps=47 format=3 uid="uid://biwafs2dhq8ax"]
 
 [ext_resource type="FontFile" uid="uid://cqqmxypu0l2ip" path="res://Assets/fonts/webfonts/Banquise-Regular.woff" id="1_b1bby"]
 [ext_resource type="Texture2D" uid="uid://dcctsaek2ji1u" path="res://Assets/GUI/WhiteBackground.jpeg" id="2_eo7vg"]
@@ -24,7 +24,10 @@
 [ext_resource type="Script" path="res://Assets/Scripts/MenuSprite.gd" id="21_pdj1b"]
 [ext_resource type="Script" path="res://Assets/Scripts/contenedor_botones.gd" id="23_cfnh5"]
 [ext_resource type="Script" path="res://Assets/Scripts/creditos.gd" id="24_8rcjn"]
+[ext_resource type="Texture2D" uid="uid://d3clal6iksoax" path="res://Assets/GUI/btn1.png" id="25_t7xwh"]
 [ext_resource type="AudioStream" uid="uid://diwfudhwjwypb" path="res://Assets/Efectos de Sonido para Taki's Adventure/selectOption.ogg" id="25_wt7pb"]
+[ext_resource type="Texture2D" uid="uid://b3xel2iphch8y" path="res://Assets/GUI/btn3.png" id="26_x40r2"]
+[ext_resource type="Texture2D" uid="uid://28ld17gue2j1" path="res://Assets/GUI/btn2.png" id="27_a6a1f"]
 
 [sub_resource type="Theme" id="Theme_mmnow"]
 default_font = ExtResource("1_b1bby")
@@ -100,6 +103,54 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5a5w"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljpfr"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8u4e"]
+texture = ExtResource("26_x40r2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rj5ge"]
+texture = ExtResource("25_t7xwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqhmx"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_in0xr"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tijv8"]
+texture = ExtResource("26_x40r2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wur0"]
+texture = ExtResource("25_t7xwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5xph"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ny6j"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqni2"]
+texture = ExtResource("26_x40r2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a01ji"]
+texture = ExtResource("25_t7xwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dq6gh"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxbkw"]
+texture = ExtResource("27_a6a1f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bw8bs"]
+texture = ExtResource("26_x40r2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmqqn"]
+texture = ExtResource("25_t7xwh")
+
 [node name="menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -137,27 +188,38 @@ script = ExtResource("23_cfnh5")
 
 [node name="botonContinuar" type="Button" parent="contenedorBotones"]
 layout_mode = 2
-text = "CONTINUAR
-"
-flat = true
+theme_override_styles/focus = SubResource("StyleBoxTexture_q5a5w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ljpfr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w8u4e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rj5ge")
+text = "CONTINUAR"
 
 [node name="botonIniciar" type="Button" parent="contenedorBotones"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_qqhmx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_in0xr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tijv8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0wur0")
 text = "INICIAR JUEGO
 "
-flat = true
 
 [node name="botonCreditos" type="Button" parent="contenedorBotones"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_f5xph")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4ny6j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qqni2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a01ji")
 text = "CREDITOS"
-flat = true
 script = ExtResource("24_8rcjn")
 
 [node name="botonSalir" type="Button" parent="contenedorBotones"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_dq6gh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxbkw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bw8bs")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rmqqn")
 text = "SALIR
 "
-flat = true
 
 [node name="select" type="AudioStreamPlayer" parent="contenedorBotones"]
 stream = ExtResource("25_wt7pb")
