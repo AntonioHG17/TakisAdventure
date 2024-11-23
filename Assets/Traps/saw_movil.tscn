@@ -31,7 +31,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b6d51"]
-radius = 9.0
+radius = 14.0357
 
 [sub_resource type="Animation" id="Animation_eecnv"]
 length = 0.001
@@ -81,6 +81,8 @@ position = Vector2(22, -1)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PathFollow2D" groups=["Hazards"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/CharacterBody2D"]
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(1.40625, 1.34375)
 sprite_frames = SubResource("SpriteFrames_dojuj")
 autoplay = "default"
 frame_progress = 0.300593

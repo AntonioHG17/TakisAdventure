@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://vhyj8bfp1ekd" path="res://Assets/Terrain 4.0/pixilart-sprite4.png" id="11_56slg"]
 [ext_resource type="Texture2D" uid="uid://cjsnjm6ehno4k" path="res://Assets/Traps/Spiked Ball/Spiked Ball.png" id="12_yq28h"]
 [ext_resource type="PackedScene" uid="uid://iiwd4cmi78jd" path="res://Assets/Terrain 5.0/plataforma_movil.tscn" id="14_t1bkw"]
-[ext_resource type="PackedScene" uid="uid://tul5aylhqb8p" path="res://Assets/Traps/saw_movil.tscn" id="15_0y5cy"]
+[ext_resource type="PackedScene" uid="uid://tul5aylhqb8p" path="res://Assets/Traps/saw_movil.tscn" id="15_rs8ab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01p3s"]
 size = Vector2(44, 44)
@@ -840,4 +840,4 @@ tile_set = SubResource("TileSet_5vtlp")
 
 [node name="PlataformaMovil" parent="." instance=ExtResource("14_t1bkw")]
 
-[node name="Saw" parent="." instance=ExtResource("15_0y5cy")]
+[node name="Saw" parent="." instance=ExtResource("15_rs8ab")]
