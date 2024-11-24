@@ -1,26 +1,26 @@
 [gd_scene load_steps=146 format=4 uid="uid://cwdjaml0f3gck"]
 
-[ext_resource type="Texture2D" uid="uid://dvjkjyf0x1qxp" path="res://Assets/Terrain 5.0/oxxo.png" id="1_xx2as"]
-[ext_resource type="Texture2D" uid="uid://bppugchck5ywe" path="res://Assets/Terrain 5.0/señales.png" id="2_8eg2n"]
-[ext_resource type="Texture2D" uid="uid://prfgt5ao2l3k" path="res://Assets/enemigos o cosas que no lo son xd/spikesv.png" id="3_fvtf8"]
-[ext_resource type="Texture2D" uid="uid://dspvren8p57dh" path="res://Assets/enemigos o cosas que no lo son xd/Terrain (16x16)2.png" id="4_boei8"]
-[ext_resource type="PackedScene" uid="uid://cj8tl7a4seukf" path="res://Assets/Escenas/player.tscn" id="5_67ofr"]
-[ext_resource type="Texture2D" uid="uid://2u00g8jphdlr" path="res://Assets/Terrain 4.0/pixilart-sprite6.png" id="6_le05i"]
-[ext_resource type="Texture2D" uid="uid://vhyj8bfp1ekd" path="res://Assets/Terrain 4.0/pixilart-sprite4.png" id="7_0kjn5"]
-[ext_resource type="Texture2D" uid="uid://cvn1negovbj8" path="res://Assets/Terrain 4.0/Terrain (16x16)2.png" id="8_aghp3"]
-[ext_resource type="Texture2D" uid="uid://2p5hptw3j4rv" path="res://Assets/terreno/pinchos.png" id="9_ngf72"]
-[ext_resource type="Texture2D" uid="uid://bb3bnxxwceaut" path="res://Assets/Terrain 5.0/pixilart-sprite7.png" id="10_51d80"]
-[ext_resource type="Texture2D" uid="uid://bsarmhc02k7r6" path="res://Assets/enemigos o cosas que no lo son xd/PC Computer - Celeste - Crystal Spikes.png" id="11_low4f"]
-[ext_resource type="Texture2D" uid="uid://dvf1xaycgy44" path="res://Assets/enemigos o cosas que no lo son xd/spkies del ya saben .png" id="12_suneo"]
-[ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="13_i121s"]
-[ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="14_xw5y6"]
-[ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="15_1ut66"]
+[ext_resource type="Texture2D" uid="uid://dvjkjyf0x1qxp" path="res://Assets/Terrain 5.0/oxxo.png" id="1_kyu28"]
+[ext_resource type="Texture2D" uid="uid://bppugchck5ywe" path="res://Assets/Terrain 5.0/señales.png" id="2_ti3wa"]
+[ext_resource type="Texture2D" uid="uid://prfgt5ao2l3k" path="res://Assets/enemigos o cosas que no lo son xd/spikesv.png" id="3_d6wli"]
+[ext_resource type="Texture2D" uid="uid://dspvren8p57dh" path="res://Assets/enemigos o cosas que no lo son xd/Terrain (16x16)2.png" id="4_vkty5"]
+[ext_resource type="PackedScene" uid="uid://cj8tl7a4seukf" path="res://Assets/Escenas/player.tscn" id="5_aky83"]
+[ext_resource type="Texture2D" uid="uid://2u00g8jphdlr" path="res://Assets/Terrain 4.0/pixilart-sprite6.png" id="6_w5vjy"]
+[ext_resource type="Texture2D" uid="uid://vhyj8bfp1ekd" path="res://Assets/Terrain 4.0/pixilart-sprite4.png" id="7_aj65f"]
+[ext_resource type="Texture2D" uid="uid://cvn1negovbj8" path="res://Assets/Terrain 4.0/Terrain (16x16)2.png" id="8_jo8k3"]
+[ext_resource type="Texture2D" uid="uid://2p5hptw3j4rv" path="res://Assets/terreno/pinchos.png" id="9_gtreu"]
+[ext_resource type="Texture2D" uid="uid://bb3bnxxwceaut" path="res://Assets/Terrain 5.0/pixilart-sprite7.png" id="10_udi6y"]
+[ext_resource type="Texture2D" uid="uid://bsarmhc02k7r6" path="res://Assets/enemigos o cosas que no lo son xd/PC Computer - Celeste - Crystal Spikes.png" id="11_rjwh4"]
+[ext_resource type="Texture2D" uid="uid://dvf1xaycgy44" path="res://Assets/enemigos o cosas que no lo son xd/spkies del ya saben .png" id="12_hieon"]
+[ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="13_l4iqe"]
+[ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="14_7ded6"]
+[ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="15_tu7pa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2f2n"]
 size = Vector2(38, 47)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rnd2"]
-texture = ExtResource("2_8eg2n")
+texture = ExtResource("2_ti3wa")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -51,14 +51,14 @@ texture = ExtResource("2_8eg2n")
 13:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6cnd"]
-texture = ExtResource("3_fvtf8")
+texture = ExtResource("3_d6wli")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pixo7"]
-texture = ExtResource("4_boei8")
+texture = ExtResource("4_vkty5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -211,7 +211,7 @@ sources/1 = SubResource("TileSetAtlasSource_c6cnd")
 sources/2 = SubResource("TileSetAtlasSource_pixo7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atcbf"]
-texture = ExtResource("6_le05i")
+texture = ExtResource("6_w5vjy")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -257,7 +257,7 @@ texture = ExtResource("6_le05i")
 11:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7guq"]
-texture = ExtResource("7_0kjn5")
+texture = ExtResource("7_aj65f")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -302,7 +302,7 @@ texture = ExtResource("7_0kjn5")
 5:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xsfgw"]
-texture = ExtResource("8_aghp3")
+texture = ExtResource("8_jo8k3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -519,10 +519,10 @@ texture = ExtResource("8_aghp3")
 20:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4otd"]
-texture = ExtResource("9_ngf72")
+texture = ExtResource("9_gtreu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qrquc"]
-texture = ExtResource("10_51d80")
+texture = ExtResource("10_udi6y")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -578,7 +578,7 @@ texture = ExtResource("10_51d80")
 11:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bteul"]
-texture = ExtResource("2_8eg2n")
+texture = ExtResource("2_ti3wa")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -618,7 +618,7 @@ sources/4 = SubResource("TileSetAtlasSource_qrquc")
 sources/5 = SubResource("TileSetAtlasSource_bteul")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sib8v"]
-texture = ExtResource("4_boei8")
+texture = ExtResource("4_vkty5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -768,18 +768,18 @@ texture = ExtResource("4_boei8")
 sources/0 = SubResource("TileSetAtlasSource_sib8v")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0lor3"]
-texture = ExtResource("3_fvtf8")
+texture = ExtResource("3_d6wli")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hv36h"]
-texture = ExtResource("11_low4f")
+texture = ExtResource("11_rjwh4")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqy2p"]
-texture = ExtResource("12_suneo")
+texture = ExtResource("12_hieon")
 
 [sub_resource type="TileSet" id="TileSet_2kfc3"]
 sources/0 = SubResource("TileSetAtlasSource_0lor3")
@@ -812,7 +812,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a017x"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_pk3a7")
 }
 
@@ -823,11 +823,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qxg3"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2s76"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dojuj"]
@@ -911,7 +911,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j47tl"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_ebkcq")
 }
 
@@ -922,11 +922,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tg41a"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4htk"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qgqho"]
@@ -991,11 +991,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ko7y"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4fffl"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dp8sb"]
@@ -1060,11 +1060,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sicke"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pv7vg"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sap28"]
@@ -1129,11 +1129,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_agtor"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nxrf"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q7k7o"]
@@ -1217,7 +1217,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sukeg"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_wypcl")
 }
 
@@ -1228,11 +1228,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lyo50"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2a4t"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_284lw"]
@@ -1316,7 +1316,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u284p"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_wkuoq")
 }
 
@@ -1327,11 +1327,11 @@ _data = {
 point_count = 5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p4cmr"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxigt"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dr53d"]
@@ -1396,11 +1396,11 @@ _data = {
 point_count = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hc40"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efk2g"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymqv"]
@@ -1484,7 +1484,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qht0y"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_2bpcn")
 }
 
@@ -1495,11 +1495,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5ey3"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fh74"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7eerg"]
@@ -1564,11 +1564,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxok7"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykxrr"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uc103"]
@@ -1633,11 +1633,11 @@ _data = {
 point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivpf0"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eh0nv"]
-atlas = ExtResource("15_1ut66")
+atlas = ExtResource("15_tu7pa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vrjca"]
@@ -1721,7 +1721,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7bcug"]
 _data = {
-"Movimiento": ExtResource("14_xw5y6"),
+"Movimiento": ExtResource("14_7ded6"),
 "RESET": SubResource("Animation_5t6di")
 }
 
@@ -1731,7 +1731,7 @@ _data = {
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(10293, -495)
-texture = ExtResource("1_xx2as")
+texture = ExtResource("1_kyu28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(10293, -455.5)
@@ -1741,7 +1741,7 @@ shape = SubResource("RectangleShape2D_v2f2n")
 tile_map_data = PackedByteArray("AAAZAP7/AAAAAAAAAAAZAP//AAAAAAEAAAAaAP7/AAABAAAAAAAaAP//AAABAAEAAABJAPX/AAAAAAAAAABJAPb/AAAAAAEAAABKAPX/AAABAAAAAABKAPb/AAABAAEAAACNAPX/AAAAAAAAAACNAPb/AAAAAAEAAACOAPX/AAABAAAAAACOAPb/AAABAAEAAADDAOv/AAABAAAAAADDAOz/AAABAAEAAADEAOv/AAAAAAAAAADEAOz/AAAAAAEAAADFAOv/AAABAAAAAADFAOz/AAABAAEAAADCAOv/AAAAAAAAAADCAOz/AAAAAAEAAADAAOv/AAAAAAAAAADAAOz/AAAAAAEAAADBAOv/AAABAAAAAADBAOz/AAABAAEAAABEAdj/AAAAAAAAAABEAdn/AAAAAAEAAABFAdj/AAABAAAAAABFAdn/AAABAAEAAADuAeL/AAAAAAAAAADuAeP/AAAAAAEAAADvAeL/AAABAAAAAADvAeP/AAABAAEAAADsAeL/AAAAAAAAAADsAeP/AAAAAAEAAADtAeL/AAABAAAAAADtAeP/AAABAAEAAABNAuP/AAACAAAAAABNAuT/AAACAAEAAABOAuP/AAADAAAAAABOAuT/AAADAAEAAABgAuP/AAACAAAAAABgAuT/AAACAAEAAABhAuP/AAADAAAAAABhAuT/AAADAAEAAABwAuP/AAACAAAAAABwAuT/AAACAAEAAABxAuP/AAADAAAAAABxAuT/AAADAAEAAAB8AuP/AAACAAAAAAB8AuT/AAACAAEAAAB9AuP/AAADAAAAAAB9AuT/AAADAAEAAABnAuP/AAACAAAAAABnAuT/AAACAAEAAABoAuP/AAADAAAAAABoAuT/AAADAAEAAABWAuP/AAACAAAAAABWAuT/AAACAAEAAABXAuP/AAADAAAAAABXAuT/AAADAAEAAABsAuP/AAACAAAAAABsAuT/AAACAAEAAABtAuP/AAADAAAAAABtAuT/AAADAAEAAAB1AuP/AAACAAAAAAB1AuT/AAACAAEAAAB2AuP/AAADAAAAAAB2AuT/AAADAAEAAAB5AuP/AAACAAAAAAB5AuT/AAACAAEAAAB6AuP/AAADAAAAAAB6AuT/AAADAAEAAABbAuP/AAACAAAAAABbAuT/AAACAAEAAABcAuP/AAADAAAAAABcAuT/AAADAAEAAABkAuP/AAACAAAAAABkAuT/AAACAAEAAABlAuP/AAADAAAAAABlAuT/AAADAAEAAABRAuP/AAACAAAAAABRAuT/AAACAAEAAABSAuP/AAADAAAAAABSAuT/AAADAAEAAACIAeD/AgARAAEAAACJAeD/AgASAAEAAACKAeD/AgATAAEAAACNAeT/AgARAAEAAACOAeT/AgASAAEAAACPAeT/AgATAAEAAACJAd7/AAACAAAAAACJAd//AAACAAEAAACKAd7/AAADAAAAAACKAd//AAADAAEAAACOAeL/AAACAAAAAACOAeP/AAACAAEAAACPAeL/AAADAAAAAACPAeP/AAADAAEAAAChAeT/AgARAAEAAACiAeT/AgASAAEAAACjAeT/AgATAAEAAACiAeL/AAACAAAAAACiAeP/AAACAAEAAACjAeL/AAADAAAAAACjAeP/AAADAAEAAAC+AeT/AgARAAEAAAC/AeT/AgASAAEAAADAAeT/AgATAAEAAAC/AeL/AAACAAAAAAC/AeP/AAACAAEAAADAAeL/AAADAAAAAADAAeP/AAADAAEAAAAuAdj/AgARAAEAAAAvAdj/AgASAAEAAAAwAdj/AgATAAEAAAA1Adn/AgARAAEAAAA2Adn/AgASAAEAAAA3Adn/AgATAAEAAAAvAdb/AAACAAAAAAAvAdf/AAACAAEAAAAwAdb/AAADAAAAAAAwAdf/AAADAAEAAAA2Adf/AAACAAAAAAA2Adj/AAACAAEAAAA3Adf/AAADAAAAAAA3Adj/AAADAAEAAAA=")
 tile_set = SubResource("TileSet_hsbog")
 
-[node name="Player" parent="." instance=ExtResource("5_67ofr")]
+[node name="Player" parent="." instance=ExtResource("5_aky83")]
 position = Vector2(69, -254)
 
 [node name="suelos" type="TileMapLayer" parent="."]
@@ -1767,7 +1767,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_6lp0x")
@@ -1816,7 +1816,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil2/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil2/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil2/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_7ks8y")
@@ -1943,7 +1943,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil3/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil3/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil3/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_4yisb")
@@ -1992,7 +1992,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil4/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil4/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil4/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_63wao")
@@ -2067,7 +2067,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil5/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil5/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil5/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_sygbw")
@@ -2168,7 +2168,7 @@ rotates = false
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlataformaMovil6/PathFollow2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaMovil6/PathFollow2D/CharacterBody2D"]
-texture = ExtResource("13_i121s")
+texture = ExtResource("13_l4iqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaMovil6/PathFollow2D/CharacterBody2D"]
 shape = SubResource("RectangleShape2D_25ro7")
