@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co2joulgc67ps"
-path="res://.godot/imported/End (Idle).png-b85e6464d6a169609ededcd0a6d57397.ctex"
+uid="uid://c0rlpn4c12074"
+path="res://.godot/imported/spkies que no son de una referencia mamalona.png-e787165f2b430bba0f0aeb64444e7ea6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/End_Start/End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-b85e6464d6a169609ededcd0a6d57397.ctex"]
+source_file="res://Assets/enemigos o cosas que no lo son xd/spkies que no son de una referencia mamalona.png"
+dest_files=["res://.godot/imported/spkies que no son de una referencia mamalona.png-e787165f2b430bba0f0aeb64444e7ea6.ctex"]
 
 [params]
 
