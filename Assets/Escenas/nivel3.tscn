@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=4 uid="uid://cqk6qm2qsibra"]
+[gd_scene load_steps=136 format=4 uid="uid://cqk6qm2qsibra"]
 
 [ext_resource type="Texture2D" uid="uid://dvjkjyf0x1qxp" path="res://Assets/Terrain 5.0/oxxo.png" id="1_8lxn3"]
 [ext_resource type="Texture2D" uid="uid://bppugchck5ywe" path="res://Assets/Terrain 5.0/señales.png" id="1_bx2h4"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="8_sk5la"]
 [ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="10_prwvv"]
 [ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="11_557tv"]
+[ext_resource type="Texture2D" uid="uid://bsarmhc02k7r6" path="res://Assets/enemigos o cosas que no lo son xd/PC Computer - Celeste - Crystal Spikes.png" id="11_p3dls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axld7"]
 size = Vector2(38, 47)
@@ -772,6 +773,7 @@ texture = ExtResource("7_6aipi")
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hv36h"]
+texture = ExtResource("11_p3dls")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_2kfc3"]
@@ -2158,8 +2160,9 @@ position = Vector2(4243, 219)
 curve = SubResource("Curve2D_j0ma4")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Saw12"]
-position = Vector2(22, -1)
+position = Vector2(21.8891, 14.9134)
 rotation = 1.57776
+progress = 15.9327
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Saw12/PathFollow2D" groups=["Hazards"]]
 

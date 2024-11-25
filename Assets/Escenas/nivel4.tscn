@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=4 uid="uid://cwdjaml0f3gck"]
+[gd_scene load_steps=146 format=4 uid="uid://cwdjaml0f3gck"]
 
 [ext_resource type="Texture2D" uid="uid://dvjkjyf0x1qxp" path="res://Assets/Terrain 5.0/oxxo.png" id="1_kyu28"]
 [ext_resource type="Texture2D" uid="uid://bppugchck5ywe" path="res://Assets/Terrain 5.0/señales.png" id="2_ti3wa"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cvn1negovbj8" path="res://Assets/Terrain 4.0/Terrain (16x16)2.png" id="8_jo8k3"]
 [ext_resource type="Texture2D" uid="uid://2p5hptw3j4rv" path="res://Assets/terreno/pinchos.png" id="9_gtreu"]
 [ext_resource type="Texture2D" uid="uid://bb3bnxxwceaut" path="res://Assets/Terrain 5.0/pixilart-sprite7.png" id="10_udi6y"]
+[ext_resource type="Texture2D" uid="uid://bsarmhc02k7r6" path="res://Assets/enemigos o cosas que no lo son xd/PC Computer - Celeste - Crystal Spikes.png" id="11_rjwh4"]
 [ext_resource type="Texture2D" uid="uid://dvf1xaycgy44" path="res://Assets/enemigos o cosas que no lo son xd/spkies del ya saben .png" id="12_hieon"]
 [ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="13_l4iqe"]
 [ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="14_7ded6"]
@@ -18,7 +19,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2f2n"]
 size = Vector2(38, 47)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_047x6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rnd2"]
 texture = ExtResource("2_ti3wa")
 0:0/0 = 0
 1:0/0 = 0
@@ -49,14 +50,14 @@ texture = ExtResource("2_ti3wa")
 12:1/0 = 0
 13:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdyyj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6cnd"]
 texture = ExtResource("3_d6wli")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iojb6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pixo7"]
 texture = ExtResource("4_vkty5")
 0:0/0 = 0
 1:0/0 = 0
@@ -205,9 +206,9 @@ texture = ExtResource("4_vkty5")
 20:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hsbog"]
-sources/0 = SubResource("TileSetAtlasSource_047x6")
-sources/1 = SubResource("TileSetAtlasSource_fdyyj")
-sources/2 = SubResource("TileSetAtlasSource_iojb6")
+sources/0 = SubResource("TileSetAtlasSource_2rnd2")
+sources/1 = SubResource("TileSetAtlasSource_c6cnd")
+sources/2 = SubResource("TileSetAtlasSource_pixo7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atcbf"]
 texture = ExtResource("6_w5vjy")
@@ -774,6 +775,7 @@ texture = ExtResource("3_d6wli")
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hv36h"]
+texture = ExtResource("11_rjwh4")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqy2p"]
