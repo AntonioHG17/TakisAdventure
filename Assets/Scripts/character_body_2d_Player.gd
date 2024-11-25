@@ -22,6 +22,9 @@ var nivel: int = 1
 @onready var run_sound: AudioStreamPlayer = $runSound
 @onready var death_sound: AudioStreamPlayer = $deathSound
 @onready var jump_sound: AudioStreamPlayer = $jumpSound
+@onready var win_sound: AudioStreamPlayer = $winSound
+@onready var taki_song: AudioStreamPlayer = $takiSong
+
 func _ready():
 	$Ray_Cast_Walls.target_position.x = rayCastDimension
 	if not saludo_reproducido:
@@ -197,6 +200,7 @@ func actualizar_salto():
 func muerte():
 	if $Ray_Cast_Hazard_Up.get_collider():
 		if $Ray_Cast_Hazard_Up.get_collider().is_in_group("Hazards"):
+			taki_song.stop()
 			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
@@ -208,6 +212,7 @@ func muerte():
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Hazard_Down.get_collider():
 		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Hazards"):
+			taki_song.stop()
 			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
@@ -219,6 +224,7 @@ func muerte():
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 	if $Ray_Cast_Walls.get_collider():
 		if $Ray_Cast_Walls.get_collider().is_in_group("Hazards"):
+			taki_song.stop()
 			death_sound.play()
 			GLOBAL.death_count += 1
 			estadoMuerte = true
@@ -233,6 +239,8 @@ func victoria():
 	if $Ray_Cast_Walls.get_collider(): #$Ray_Cast_Hazard_Down.get_collider
 		if $Ray_Cast_Walls.get_collider().is_in_group("Meta"): #$Ray_Cast_Hazard_Down.get_collider().is_in_group("Meta")
 			run_sound.stop()
+			taki_song.stop()
+			win_sound.play()
 			# Bloquear movimiento del personaje
 			bloquea_movimiento = true
 			velocity = Vector2.ZERO
@@ -251,6 +259,8 @@ func victoria():
 	if $Ray_Cast_Hazard_Down.get_collider():
 		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Meta"):
 			run_sound.stop()
+			taki_song.stop()
+			win_sound.play()
 			# Bloquear movimiento del personaje
 			bloquea_movimiento = true
 			velocity = Vector2.ZERO

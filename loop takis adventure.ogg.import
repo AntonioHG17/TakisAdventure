@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqf1c300f5j6w"
+path="res://.godot/imported/loop takis adventure.ogg-38b6e92bdbd3e5aef8f37f9c4b420e2b.oggvorbisstr"
+
+[deps]
+
+source_file="res://loop takis adventure.ogg"
+dest_files=["res://.godot/imported/loop takis adventure.ogg-38b6e92bdbd3e5aef8f37f9c4b420e2b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
