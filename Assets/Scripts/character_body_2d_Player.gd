@@ -277,6 +277,19 @@ func victoria():
 			GLOBAL.nivel += 1
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 
+func reinicio():
+	if Input.is_action_pressed("Restart"):
+		taki_song.stop()
+		death_sound.play()
+		GLOBAL.death_count += 1
+		estadoMuerte = true
+		bloquea_movimiento = true
+		velocity.y = 0
+		velocity.x = 0
+		animated_sprite_2d.play("Muerte")
+		await get_tree().create_timer(4.0).timeout
+		get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
+		
 func _process(delta):
 	if not bloquea_movimiento:
 		process_dash(delta) 
@@ -287,6 +300,7 @@ func _process(delta):
 		actualizar_salto()
 		muerte()
 		victoria()
+		reinicio()
 
 func _physics_process(delta):
 	gravedad(delta)
