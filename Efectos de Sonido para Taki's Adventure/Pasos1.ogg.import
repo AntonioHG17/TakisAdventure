@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://n67mt27iwjon"
+path="res://.godot/imported/Pasos1.ogg-b54a2ee87d847769c257e8c1af3accc8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de Sonido para Taki's Adventure/Pasos1.ogg"
+dest_files=["res://.godot/imported/Pasos1.ogg-b54a2ee87d847769c257e8c1af3accc8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://31hckcn1jekq"
+path="res://.godot/imported/loop takis adventure.ogg-7c9c7d8b91c322e27cbdae59a5911f98.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de Sonido para Taki's Adventure/loop takis adventure.ogg"
+dest_files=["res://.godot/imported/loop takis adventure.ogg-7c9c7d8b91c322e27cbdae59a5911f98.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

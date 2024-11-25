@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://iiwd4cmi78jd"]
 
 [ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="1_8mbco"]
-[ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="2_1w87o"]
+[ext_resource type="Animation" uid="uid://5l8yptjbelnw" path="res://Movimiento.res" id="2_1w87o"]
 
 [sub_resource type="Curve2D" id="Curve2D_jxwv0"]
 _data = {
