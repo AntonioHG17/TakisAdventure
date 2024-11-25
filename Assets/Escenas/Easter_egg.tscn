@@ -1,28 +1,28 @@
-[gd_scene load_steps=25 format=3 uid="uid://bnkovudei781w"]
+[gd_scene load_steps=25 format=3 uid="uid://tql5gf70xxo1"]
 
-[ext_resource type="FontFile" uid="uid://qa7vlhi1ybvk" path="res://Assets/fonts/pixel-times/Pixel Times.ttf" id="1_bcm30"]
-[ext_resource type="Script" path="res://Assets/Scripts/cambio_nivel.gd" id="2_rv5tj"]
-[ext_resource type="Texture2D" uid="uid://c6s4kivwtlohu" path="res://Assets/GUI/Black_Background.jpg" id="3_grgix"]
-[ext_resource type="Texture2D" uid="uid://deondprnj361v" path="res://Assets/Characters/taki_sheet.png" id="4_fy360"]
-[ext_resource type="Texture2D" uid="uid://cpd7mdfm06ick" path="res://Assets/GUI/cargatakis.png" id="5_d2jhl"]
+[ext_resource type="FontFile" uid="uid://505guoi567ye" path="res://Assets/fonts/pixel-times/Pixel Times Bold.ttf" id="1_hvvx2"]
+[ext_resource type="Script" path="res://Assets/Escenas/easter_egg.gd" id="2_xqcdq"]
+[ext_resource type="Texture2D" uid="uid://c6s4kivwtlohu" path="res://Assets/GUI/Black_Background.jpg" id="3_l2hsb"]
+[ext_resource type="Texture2D" uid="uid://deondprnj361v" path="res://Assets/Characters/taki_sheet.png" id="4_s02x0"]
+[ext_resource type="Texture2D" uid="uid://cpd7mdfm06ick" path="res://Assets/GUI/cargatakis.png" id="5_l3d4r"]
 
-[sub_resource type="Theme" id="Theme_s8sk4"]
-default_font = ExtResource("1_bcm30")
-default_font_size = 35
+[sub_resource type="Theme" id="Theme_7inbr"]
+default_font = ExtResource("1_hvvx2")
+default_font_size = 40
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7bej"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nun7m"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u567t"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(64, 64, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yshte"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ksle"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -40,30 +40,30 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3uif"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n8haw"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rv7q6"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6qxk"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(96, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lrvtx"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(128, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqrn3"]
-atlas = ExtResource("4_fy360")
+atlas = ExtResource("4_s02x0")
 region = Rect2(160, 96, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5py8h"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymlex"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -89,25 +89,25 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_xrdt5"]
+[sub_resource type="LabelSettings" id="LabelSettings_0dvq5"]
 line_spacing = 0.0
 font_size = 40
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 1, 0)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ln57h"]
+[sub_resource type="LabelSettings" id="LabelSettings_qu168"]
 line_spacing = 0.0
 font_size = 40
 
-[sub_resource type="LabelSettings" id="LabelSettings_enbqn"]
+[sub_resource type="LabelSettings" id="LabelSettings_ncrto"]
 line_spacing = 0.0
 font_size = 40
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf02d"]
-atlas = ExtResource("5_d2jhl")
+atlas = ExtResource("5_l3d4r")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tfxf6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbeit"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -119,10 +119,10 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_543v4"]
-atlas = ExtResource("5_d2jhl")
+atlas = ExtResource("5_l3d4r")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hyj1w"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6wc6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -133,15 +133,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="cambioNivel" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_s8sk4")
-script = ExtResource("2_rv5tj")
+theme = SubResource("Theme_7inbr")
+script = ExtResource("2_xqcdq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -150,23 +150,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_grgix")
+texture = ExtResource("3_l2hsb")
 
 [node name="Taki_transicion" type="AnimatedSprite2D" parent="TextureRect"]
 position = Vector2(645, 386)
 scale = Vector2(3.875, 3.8125)
-sprite_frames = SubResource("SpriteFrames_yshte")
+sprite_frames = SubResource("SpriteFrames_8ksle")
 animation = &"Pensativo"
 autoplay = "Pensativo"
-frame_progress = 0.859911
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
 position = Vector2(669, 261)
 scale = Vector2(4, 3.3125)
-sprite_frames = SubResource("SpriteFrames_5py8h")
+sprite_frames = SubResource("SpriteFrames_ymlex")
 animation = &"Cloud"
 autoplay = "Cloud"
-frame_progress = 0.123602
 
 [node name="Nivel" type="Label" parent="TextureRect"]
 layout_mode = 1
@@ -175,25 +173,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 348.0
-offset_top = -343.0
-offset_right = 492.0
-offset_bottom = -263.0
+offset_left = 315.0
+offset_top = -345.0
+offset_right = 483.0
+offset_bottom = -265.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 text = "NIVEL:
 
 "
-label_settings = SubResource("LabelSettings_xrdt5")
-
-[node name="ConteoNivel" type="Label" parent="TextureRect"]
-layout_mode = 0
-offset_left = 1163.0
-offset_top = 20.0
-offset_right = 1203.0
-offset_bottom = 68.0
-text = "1"
+label_settings = SubResource("LabelSettings_0dvq5")
 
 [node name="Muerte" type="Label" parent="TextureRect"]
 layout_mode = 1
@@ -212,17 +202,29 @@ size_flags_horizontal = 4
 text = "MUERTES:
 
 "
-label_settings = SubResource("LabelSettings_ln57h")
+label_settings = SubResource("LabelSettings_qu168")
 
 [node name="ConteoMuerte" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 16.0
-offset_right = 288.0
-offset_bottom = 64.0
+offset_left = 281.0
+offset_top = 15.0
+offset_right = 321.0
+offset_bottom = 63.0
 text = "0
 "
-label_settings = SubResource("LabelSettings_enbqn")
+label_settings = SubResource("LabelSettings_ncrto")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConteoMuerte2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1143.0
+offset_top = 11.0
+offset_right = 1183.0
+offset_bottom = 59.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_ncrto")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -232,15 +234,15 @@ offset_left = 5.0
 offset_top = 529.0
 offset_right = 1274.0
 offset_bottom = 647.0
-text = "Hola"
+text = "Chito es bien chambon, copia y pega si es verdad"
 horizontal_alignment = 1
 
 [node name="iconoMuerte" type="AnimatedSprite2D" parent="TextureRect"]
-position = Vector2(321.625, 33.75)
+position = Vector2(352, 36)
 scale = Vector2(3.17187, 3.15625)
-sprite_frames = SubResource("SpriteFrames_tfxf6")
+sprite_frames = SubResource("SpriteFrames_cbeit")
 
 [node name="iconoNivel" type="AnimatedSprite2D" parent="TextureRect"]
 position = Vector2(1220, 37)
 scale = Vector2(3.125, 3.0625)
-sprite_frames = SubResource("SpriteFrames_hyj1w")
+sprite_frames = SubResource("SpriteFrames_r6wc6")

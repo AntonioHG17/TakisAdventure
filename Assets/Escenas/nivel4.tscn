@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=4 uid="uid://cwdjaml0f3gck"]
+[gd_scene load_steps=145 format=4 uid="uid://cwdjaml0f3gck"]
 
 [ext_resource type="Texture2D" uid="uid://dvjkjyf0x1qxp" path="res://Assets/Terrain 5.0/oxxo.png" id="1_kyu28"]
 [ext_resource type="Texture2D" uid="uid://bppugchck5ywe" path="res://Assets/Terrain 5.0/señales.png" id="2_ti3wa"]
@@ -10,10 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cvn1negovbj8" path="res://Assets/Terrain 4.0/Terrain (16x16)2.png" id="8_jo8k3"]
 [ext_resource type="Texture2D" uid="uid://2p5hptw3j4rv" path="res://Assets/terreno/pinchos.png" id="9_gtreu"]
 [ext_resource type="Texture2D" uid="uid://bb3bnxxwceaut" path="res://Assets/Terrain 5.0/pixilart-sprite7.png" id="10_udi6y"]
-[ext_resource type="Texture2D" uid="uid://bsarmhc02k7r6" path="res://Assets/enemigos o cosas que no lo son xd/PC Computer - Celeste - Crystal Spikes.png" id="11_rjwh4"]
 [ext_resource type="Texture2D" uid="uid://dvf1xaycgy44" path="res://Assets/enemigos o cosas que no lo son xd/spkies del ya saben .png" id="12_hieon"]
 [ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="13_l4iqe"]
-[ext_resource type="Animation" uid="uid://dy0bp3ugtt5ni" path="res://Movimiento.res" id="14_7ded6"]
+[ext_resource type="Animation" uid="uid://5l8yptjbelnw" path="res://Movimiento.res" id="14_7ded6"]
 [ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="15_tu7pa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2f2n"]
@@ -770,18 +769,25 @@ sources/0 = SubResource("TileSetAtlasSource_sib8v")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0lor3"]
 texture = ExtResource("3_d6wli")
 0:0/0 = 0
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -5, 8, -5.375, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -2.5, 8, -2.625, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-6.9375, 1.75, 6.5625, 1.375, 6.4375, 8, -6.9375, 8)
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hv36h"]
-texture = ExtResource("11_rjwh4")
+texture = ExtResource("12_hieon")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqy2p"]
 texture = ExtResource("12_hieon")
 
 [sub_resource type="TileSet" id="TileSet_2kfc3"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
+physics_layer_1/collision_layer = 2
+physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_0lor3")
 sources/1 = SubResource("TileSetAtlasSource_hv36h")
 sources/2 = SubResource("TileSetAtlasSource_tqy2p")
@@ -1752,7 +1758,7 @@ metadata/_edit_group_ = true
 [node name="muros" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_fwbtn")
 
-[node name="trampas" type="TileMapLayer" parent="."]
+[node name="trampas" type="TileMapLayer" parent="." groups=["Hazards"]]
 tile_map_data = PackedByteArray("AABLAPn/AAAAAAAAAABMAPn/AAAAAAAAAABNAPn/AAAAAAAAAABOAPn/AAAAAAAAAABPAPn/AAAAAAAAAABQAPn/AAAAAAAAAABRAPn/AAAAAAAAAABSAPn/AAAAAAAAAABTAPn/AAAAAAAAAABUAPn/AAAAAAAAAABVAPn/AAAAAAAAAABWAPn/AAAAAAAAAABXAPn/AAAAAAAAAABYAPn/AAAAAAAAAABZAPn/AAAAAAAAAABaAPn/AAAAAAAAAABbAPn/AAAAAAAAAABcAPn/AAAAAAAAAABdAPn/AAAAAAAAAABeAPn/AAAAAAAAAABfAPn/AAAAAAAAAABgAPn/AAAAAAAAAABhAPn/AAAAAAAAAABiAPn/AAAAAAAAAABjAPn/AAAAAAAAAABkAPn/AAAAAAAAAABlAPn/AAAAAAAAAABmAPn/AAAAAAAAAABnAPn/AAAAAAAAAABoAPn/AAAAAAAAAABpAPn/AAAAAAAAAABqAPn/AAAAAAAAAABrAPn/AAAAAAAAAABsAPn/AAAAAAAAAABtAPn/AAAAAAAAAABuAPn/AAAAAAAAAABvAPn/AAAAAAAAAABwAPn/AAAAAAAAAABxAPn/AAAAAAAAAAByAPn/AAAAAAAAAABzAPn/AAAAAAAAAAB0APn/AAAAAAAAAAB1APn/AAAAAAAAAAB2APn/AAAAAAAAAAB3APn/AAAAAAAAAAB4APn/AAAAAAAAAAB5APn/AAAAAAAAAAB6APn/AAAAAAAAAAB7APn/AAAAAAAAAAB8APn/AAAAAAAAAAB9APn/AAAAAAAAAAB+APn/AAAAAAAAAAB/APn/AAAAAAAAAACAAPn/AAAAAAAAAACBAPn/AAAAAAAAAACCAPn/AAAAAAAAAACDAPn/AAAAAAAAAACEAPn/AAAAAAAAAACFAPn/AAAAAAAAAACGAPn/AAAAAAAAAACHAPn/AAAAAAAAAABxAPP/AAAAAAAAAGBxAPL/AAAAAAAAAGBxAPH/AAAAAAAAAGBxAPD/AAAAAAAAAGBxAO//AAAAAAAAAGBxAO7/AAAAAAAAAGBxAO3/AAAAAAAAAGBfAPP/AAAAAAAAAGBfAPL/AAAAAAAAAGBfAPH/AAAAAAAAAGBfAPD/AAAAAAAAAGBfAO//AAAAAAAAAGBfAO7/AAAAAAAAAGBfAO3/AAAAAAAAAGBaAOz/AAAAAAAAADBbAOz/AAAAAAAAADBcAOz/AAAAAAAAADBdAOz/AAAAAAAAADBeAOz/AAAAAAAAADBsAOz/AAAAAAAAADBtAOz/AAAAAAAAADBuAOz/AAAAAAAAADBvAOz/AAAAAAAAADBwAOz/AAAAAAAAADBZAO3/AAAAAAAAAFBZAO7/AAAAAAAAAFBZAO//AAAAAAAAAFBZAPD/AAAAAAAAAFBZAPH/AAAAAAAAAFBZAPL/AAAAAAAAAFBZAPP/AAAAAAAAAFBrAO3/AAAAAAAAAFBrAO7/AAAAAAAAAFBrAO//AAAAAAAAAFBrAPD/AAAAAAAAAFBrAPH/AAAAAAAAAFBrAPL/AAAAAAAAAFBrAPP/AAAAAAAAAFCgAPT/AAABAAAAAACvAO3/AAABAAAAAACwAO7/AAABAAAAAFChAPX/AAABAAAAAFCvAO//AAABAAAAADCgAPb/AAABAAAAADCfAPX/AAABAAAAAGCuAO7/AAABAAAAAGBNAdr/AAAAAAAAAABTAdX/AAAAAAAAAABUAdX/AAAAAAAAAABVAdX/AAAAAAAAAABWAdX/AAAAAAAAAABXAdX/AAAAAAAAAABYAdX/AAAAAAAAAABZAdX/AAAAAAAAAABaAdX/AAAAAAAAAABbAdX/AAAAAAAAAABfAdr/AAAAAAAAAABjAdr/AAAAAAAAAABcAdb/AAAAAAAAAFBgAdv/AAAAAAAAAFBkAdv/AAAAAAAAAFBOAdv/AAAAAAAAAFBNAdz/AAAAAAAAADBbAdf/AAAAAAAAADBaAdf/AAAAAAAAADBZAdf/AAAAAAAAADBYAdf/AAAAAAAAADBXAdf/AAAAAAAAADBWAdf/AAAAAAAAADBVAdf/AAAAAAAAADBUAdf/AAAAAAAAADBTAdf/AAAAAAAAADBfAdz/AAAAAAAAADBjAdz/AAAAAAAAADBMAdv/AAAAAAAAAGBSAdb/AAAAAAAAAGBeAdv/AAAAAAAAAGBiAdv/AAAAAAAAAGA=")
 tile_set = SubResource("TileSet_2kfc3")
 

@@ -20,23 +20,7 @@ func iniciar_juego():
 
 func cerrar_juego():
 	get_tree().quit()
-
-func _process(_delta: float) -> void:
-	# Solo permitir la navegación si GLOBAL.seleccion es verdadero
-	if GLOBAL.seleccion == true:
-		# Navegación hacia arriba
-		if Input.is_action_just_pressed("ui_up"):
-			mover_en_menu(-1)
-
-		# Navegación hacia abajo
-		if Input.is_action_just_pressed("ui_down"):
-			mover_en_menu(1)
-
-		# Activar el botón seleccionado con Enter o el botón A
-		if Input.is_action_just_pressed("ui_accept"):
-			activar_boton_seleccionado()
-
-# Cambia el enfoque del botón en el menú
+	
 func mover_en_menu(direccion: int) -> void:
 	# Cambiar al siguiente botón según la dirección
 	boton_actual += direccion
@@ -53,7 +37,18 @@ func mover_en_menu(direccion: int) -> void:
 	# Reproducir el efecto de sonido
 	if not select.is_playing():
 		select.play()
-
+		
 # Ejecutar la acción del botón actualmente seleccionado
 func activar_boton_seleccionado() -> void:
 	botones[boton_actual].emit_signal("pressed")
+	
+func _process(_delta: float) -> void:
+	# Solo permitir la navegación si GLOBAL.seleccion es verdadero
+	if GLOBAL.seleccion == true:
+		# Navegación hacia arriba
+		if Input.is_action_just_pressed("ui_up"):
+			mover_en_menu(-1)
+
+		# Navegación hacia abajo
+		if Input.is_action_just_pressed("ui_down"):
+			mover_en_menu(1)

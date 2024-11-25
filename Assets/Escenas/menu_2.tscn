@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://biwafs2dhq8ax"]
 
-[ext_resource type="FontFile" uid="uid://cqqmxypu0l2ip" path="res://Assets/fonts/webfonts/Banquise-Regular.woff" id="1_b1bby"]
+[ext_resource type="FontFile" uid="uid://505guoi567ye" path="res://Assets/fonts/pixel-times/Pixel Times Bold.ttf" id="1_6fo6l"]
 [ext_resource type="Texture2D" uid="uid://dcctsaek2ji1u" path="res://Assets/GUI/WhiteBackground.jpeg" id="2_eo7vg"]
 [ext_resource type="Script" path="res://Assets/Scripts/menu_2.gd" id="2_qcvpp"]
 [ext_resource type="Texture2D" uid="uid://d0iuh03sxmgct" path="res://Assets/Animaciones_menu/pixil-frame-0.png" id="3_qak1q"]
@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://28ld17gue2j1" path="res://Assets/GUI/btn2.png" id="27_a6a1f"]
 
 [sub_resource type="Theme" id="Theme_mmnow"]
-default_font = ExtResource("1_b1bby")
+default_font = ExtResource("1_6fo6l")
 default_font_size = 40
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wmwe8"]
@@ -179,11 +179,10 @@ script = ExtResource("21_pdj1b")
 
 [node name="contenedorBotones" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 499.0
+offset_left = 449.0
 offset_top = 724.0
-offset_right = 775.0
+offset_right = 831.0
 offset_bottom = 960.0
-alignment = 1
 script = ExtResource("23_cfnh5")
 
 [node name="botonContinuar" type="Button" parent="contenedorBotones"]

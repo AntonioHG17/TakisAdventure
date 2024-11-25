@@ -7,8 +7,7 @@ var saludo_reproducido = false
 var bloquea_movimiento = true 
 var can_jump: bool = false
 var pegado_a_pared: bool = false
-var rayCastDimension = 12
-var rayCastDimensionV = 22
+var rayCastDimension = 18
 var ignore_horizontal_animation = false
 @export var dash_speed: float = 700
 @export var dash_duration: float = 0.2
@@ -231,8 +230,26 @@ func muerte():
 			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 
 func victoria():
-	if $Ray_Cast_Walls.get_collider():
-		if $Ray_Cast_Walls.get_collider().is_in_group("Meta"):
+	if $Ray_Cast_Walls.get_collider(): #$Ray_Cast_Hazard_Down.get_collider
+		if $Ray_Cast_Walls.get_collider().is_in_group("Meta"): #$Ray_Cast_Hazard_Down.get_collider().is_in_group("Meta")
+			run_sound.stop()
+			# Bloquear movimiento del personaje
+			bloquea_movimiento = true
+			velocity = Vector2.ZERO
+
+			# Obtener la cámara para ajustar zoom
+			var camera = get_node("Camera2D")
+			if camera:
+				var tween = get_tree().create_tween()
+				tween.tween_property(camera, "zoom", Vector2(13, 13), 1.0)  # Zoom a 13 en 1 segundo
+
+			# Reproducir animación de SaludoFinal
+			animated_sprite_2d.play("SaludoFinal")
+			await get_tree().create_timer(4.0).timeout
+			GLOBAL.nivel += 1
+			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
+	if $Ray_Cast_Hazard_Down.get_collider():
+		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Meta"):
 			run_sound.stop()
 			# Bloquear movimiento del personaje
 			bloquea_movimiento = true

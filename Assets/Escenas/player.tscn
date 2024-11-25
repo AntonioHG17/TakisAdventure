@@ -244,8 +244,8 @@ zoom = Vector2(3, 3)
 
 [node name="Ray_Cast_Walls" type="RayCast2D" parent="Taki"]
 position = Vector2(147, 181)
-target_position = Vector2(10.5, -1)
-collision_mask = 3
+target_position = Vector2(18, 0)
+collision_mask = 7
 
 [node name="Ray_Cast_Hazard_Down" type="RayCast2D" parent="Taki"]
 position = Vector2(146, 180)
@@ -254,7 +254,7 @@ collision_mask = 15
 
 [node name="Ray_Cast_Hazard_Up" type="RayCast2D" parent="Taki"]
 position = Vector2(146, 184)
-target_position = Vector2(0, -22)
+target_position = Vector2(1, -27)
 collision_mask = 15
 
 [node name="jumpSound" type="AudioStreamPlayer" parent="Taki"]
