@@ -52,9 +52,9 @@ func movimiento():
 			velocity.x = (speed * horizontal) * 2
 
 			# Reproducir sonido de correr solo si no se está ejecutando el dash
-			if is_on_floor() and not run_sound.is_playing() and not dash_sound.is_playing():
+			if is_on_floor() and not run_sound.is_playing() and not dash_sound.is_playing() and not ignore_horizontal_animation:
 				run_sound.play()
-			animated_sprite_2d.play("Correr")
+				animated_sprite_2d.play("Correr")
 		else:
 			velocity.x = speed * horizontal
 

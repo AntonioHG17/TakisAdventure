@@ -216,7 +216,7 @@ label_settings = SubResource("LabelSettings_ncrto")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ConteoMuerte2" type="Label" parent="TextureRect"]
+[node name="ConteoNivel" type="Label" parent="TextureRect"]
 layout_mode = 0
 offset_left = 1143.0
 offset_top = 11.0
