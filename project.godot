@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="El epitafio del taco"
+config/name="Taki's Adventure"
 run/main_scene="res://Assets/Escenas/menu_2.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="res://Assets/Texturas/C.png"
 
 [autoload]
 
