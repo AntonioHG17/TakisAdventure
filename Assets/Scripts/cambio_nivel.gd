@@ -51,9 +51,12 @@ func randomizador():
 	if random_number == 18:
 		dialogo_random.text = "El primer paso es el más importante, pero no debes quedarte ahí"
 func cambioNivel():
-	await get_tree().create_timer(3.0).timeout
-	get_tree().change_scene_to_file("res://Assets/Escenas/nivel"+str(GLOBAL.nivel)+".tscn")
-	
+	if GLOBAL.nivel < 6:
+		await get_tree().create_timer(3.0).timeout
+		get_tree().change_scene_to_file("res://Assets/Escenas/nivel"+str(GLOBAL.nivel)+".tscn")
+	else:
+		get_tree().change_scene_to_file("res://Assets/Escenas/End.tscn")
+		GLOBAL.nivel = 1
 func _process(_delta: float) -> void:
 	randomizador()
 	cambioNivel()

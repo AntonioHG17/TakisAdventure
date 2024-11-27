@@ -7,7 +7,7 @@ var saludo_reproducido = false
 var bloquea_movimiento = true 
 var can_jump: bool = false
 var pegado_a_pared: bool = false
-var rayCastDimension = 18
+var rayCastDimension = 13
 var ignore_horizontal_animation = false
 @export var dash_speed: float = 700
 @export var dash_duration: float = 0.2
@@ -23,7 +23,7 @@ var nivel: int = 1
 @onready var death_sound: AudioStreamPlayer = $deathSound
 @onready var jump_sound: AudioStreamPlayer = $jumpSound
 @onready var win_sound: AudioStreamPlayer = $winSound
-@onready var taki_song: AudioStreamPlayer = $takiSong
+@onready var taki_song: AudioStreamPlayer = $takiSong  
 
 func _ready():
 	$Ray_Cast_Walls.target_position.x = rayCastDimension
@@ -198,42 +198,35 @@ func actualizar_salto():
 			animated_sprite_2d.play("Caida")
 
 func muerte():
-	if $Ray_Cast_Hazard_Up.get_collider():
-		if $Ray_Cast_Hazard_Up.get_collider().is_in_group("Hazards"):
-			taki_song.stop()
-			death_sound.play()
-			GLOBAL.death_count += 1
-			estadoMuerte = true
-			bloquea_movimiento = true
-			velocity.y = 0
-			velocity.x = 0
-			animated_sprite_2d.play("Muerte")
-			await get_tree().create_timer(4.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
-	if $Ray_Cast_Hazard_Down.get_collider():
-		if $Ray_Cast_Hazard_Down.get_collider().is_in_group("Hazards"):
-			taki_song.stop()
-			death_sound.play()
-			GLOBAL.death_count += 1
-			estadoMuerte = true
-			bloquea_movimiento = true
-			velocity.y = 0
-			velocity.x = 0
-			animated_sprite_2d.play("Muerte")
-			await get_tree().create_timer(4.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
-	if $Ray_Cast_Walls.get_collider():
-		if $Ray_Cast_Walls.get_collider().is_in_group("Hazards"):
-			taki_song.stop()
-			death_sound.play()
-			GLOBAL.death_count += 1
-			estadoMuerte = true
-			bloquea_movimiento = true
-			velocity.y = 0
-			velocity.x = 0
-			animated_sprite_2d.play("Muerte")
-			await get_tree().create_timer(4.0).timeout
-			get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
+	# Verificar colisiones y manejar la muerte
+	if checar_hazard($Ray_Cast_Hazard_Up) or checar_hazard($Ray_Cast_Hazard_Down) or checar_hazard($Ray_Cast_Walls):
+		manejar_muerte()
+
+func checar_hazard(ray_cast) -> bool:
+	# Verificar si el ray_cast detecta un collider en el grupo "Hazards"
+	if ray_cast.get_collider() and ray_cast.get_collider().is_in_group("Hazards"):
+		return true
+	return false
+
+func manejar_muerte():
+	# Detener música y reproducir sonido de muerte
+	taki_song.stop()
+	run_sound.stop()
+	death_sound.play()
+
+	# Actualizar estados y estadísticas
+	GLOBAL.death_count += 1
+	estadoMuerte = true
+	bloquea_movimiento = true
+	velocity = Vector2.ZERO
+	animated_sprite_2d.play("Muerte")
+
+	# Esperar 4 segundos y cambiar de escena
+	if is_inside_tree() and get_tree():
+		await get_tree().create_timer(4.0).timeout
+		get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
+	else:
+		print("Error: Nodo no está en el árbol, no se puede crear temporizador.")
 
 func victoria():
 	if $Ray_Cast_Walls.get_collider(): #$Ray_Cast_Hazard_Down.get_collider
@@ -290,6 +283,7 @@ func reinicio():
 		await get_tree().create_timer(4.0).timeout
 		get_tree().change_scene_to_file("res://Assets/Escenas/cambio_nivel.tscn")
 		
+		
 func _process(delta):
 	if not bloquea_movimiento:
 		process_dash(delta) 
@@ -301,6 +295,7 @@ func _process(delta):
 		muerte()
 		victoria()
 		reinicio()
+
 
 func _physics_process(delta):
 	gravedad(delta)

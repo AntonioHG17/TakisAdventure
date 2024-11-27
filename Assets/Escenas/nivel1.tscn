@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://bq7iilxeix76o"]
+[gd_scene load_steps=75 format=4 uid="uid://bq7iilxeix76o"]
 
 [ext_resource type="Texture2D" uid="uid://cvwkm0d06lpfc" path="res://Assets/Terrain 5.0/BG0.png" id="1_dx0rn"]
 [ext_resource type="Texture2D" uid="uid://dgaiwhur1cxe2" path="res://Assets/Terrain 5.0/BG1.png" id="2_gb8oo"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bqw1vfyc020a0" path="res://Assets/Terrain 4.0/PlataformaMovil.png" id="19_mde6x"]
 [ext_resource type="Animation" uid="uid://5l8yptjbelnw" path="res://Movimiento.res" id="20_p6r35"]
 [ext_resource type="Texture2D" uid="uid://b8hgudnss7oqt" path="res://Assets/enemigos o cosas que no lo son xd/sierra.png" id="21_76wqt"]
+[ext_resource type="PackedScene" uid="uid://ddpbv7epi2hif" path="res://Assets/Escenas/menu_pausa.tscn" id="22_acequ"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0ruo"]
 texture = ExtResource("1_dx0rn")
@@ -5133,3 +5134,5 @@ libraries = {
 "": SubResource("AnimationLibrary_wrqqh")
 }
 autoplay = "Saw"
+
+[node name="menuPausa" parent="." instance=ExtResource("22_acequ")]
